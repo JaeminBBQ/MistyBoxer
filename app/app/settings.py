@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'misty_api',
+    'web_app',
 ]
 
 MIDDLEWARE = [

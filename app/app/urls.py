@@ -20,4 +20,5 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('misty/', include('misty_api.urls')),
+    path('', include('web_app.urls')),
 ]

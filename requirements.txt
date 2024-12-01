@@ -5,6 +5,8 @@ backports.zoneinfo==0.2.1
 base-local-planner==1.17.3
 camera-calibration-parsers==1.12.0
 catkin==0.8.10
+certifi==2024.8.30
+charset-normalizer==3.4.0
 controller-manager==0.20.0
 controller-manager-msgs==0.20.0
 cv-bridge==1.16.2
@@ -21,6 +23,7 @@ genlisp==0.4.18
 genmsg==0.6.0
 gennodejs==2.0.2
 genpy==0.6.15
+idna==3.10
 image-geometry==1.16.2
 interactive-markers==1.12.0
 joint-state-publisher==1.15.1
@@ -39,6 +42,7 @@ qt-dotgraph==0.4.2
 qt-gui==0.4.2
 qt-gui-cpp==0.4.2
 qt-gui-py-common==0.4.2
+requests==2.32.3
 resource-retriever==1.12.7
 rosbag==1.16.0
 rosboost-cfg==1.15.8
@@ -118,4 +122,5 @@ topic-tools==1.16.0
 typing-extensions==4.12.2
 unique-id==1.0.6
 urdfdom-py==0.4.6
+urllib3==2.2.3
 xacro==1.14.18

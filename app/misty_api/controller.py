@@ -1,8 +1,10 @@
 import requests
 
-def drive(linear_velocity, angular_velocity):
+def drive(linear_velocity, angular_velocity, time, degree):
     params = {
         "linearVelocity": linear_velocity,
-        "angularVelocity": angular_velocity
+        "angularVelocity": angular_velocity,
+        "timeMs": time,
+        "degree": degree
     }
-    requests.post("http://192.168.1.125/api/drive", params=params)
+    requests.post("http://eve/api/drive/time", params=params)

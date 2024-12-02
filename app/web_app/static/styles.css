@@ -1,0 +1,31 @@
+body{
+    padding: 25px;
+  }
+  
+  button {
+    height: 50px;
+    align-self: center;
+  }
+  
+  .title {
+      color: #5C6AC4;
+  }
+  
+  .container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .column {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .left {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
+  .right {
+    grid-template-rows: 1fr 1fr 1fr;
+  }

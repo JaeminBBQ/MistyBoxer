@@ -9,24 +9,25 @@
       <div class="container">
         <div class="column left">
           <img src="https://www.robotlab.com/hubfs/Misty%20enhanced.png" height="50px" width="50px">
-          <button>Complete Task</button>
-          <button style="background: red">STOP</button>
+          <button onclick="completeTask()">Complete Task</button>
+          <button onclick="stop()" style="background: red">STOP</button>
         </div>
         <div class="column right">
-          <h2>Please select: <span id="task">[TASK]</span></h2>
-          <select>
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-            <option>D</option>
-            <option>E</option>
-            <option>F</option>
-            <option>G</option>
-            <option>H</option>
+          <h2>Please select: <span id="task">E</span></h2>
+          <select id="taskSelect">
+            <option value="0">Task Options</option>
+            <option disabled>A</option>
+            <option disabled>B</option>
+            <option disabled>C</option>
+            <option disabled>D</option>
+            <option value="E">E</option>
+            <option disabled>F</option>
+            <option disabled>G</option>
+            <option disabled>H</option>
           </select>
-          <button style="background: lightgreen">START</button>
+          <button onclick="start()" style="background: lightgreen">START</button>
         </div>
       </div>
-    <!-- <script src="{% static 'web_app/bootstrap/js/bootstrap.bundle.min.js' %}"></script> -->
+    <script src="{% static 'page.js' %}"></script>
   </body>
 </html>

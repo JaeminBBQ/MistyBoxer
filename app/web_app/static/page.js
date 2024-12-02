@@ -1,4 +1,5 @@
 const SCENARIO = 1; // omit: 1, before: 2, after: 3
+const BASE_URL = "http://127.0.0.1:8000/misty/";
 let startTime = endTime = 0;
 
 function start() {
@@ -24,7 +25,25 @@ function completeTask() {
     console.log(endTime - startTime);
 }
 
-function runScenario(scenarioNum) {
+async function runScenarioBetter(body_data, key) {
+    let tableParam = {
+        method: "POST",
+        body: body_data
+    };
+    const url = BASE_URL + "scenario1";
+
+    const res = await fetch(url, tableParam);
+    let json_data = await res.json();
+
+    if (key === "status" && json_data["status"] != 0) {
+        alert(data["status"]);
+    }
+    if (key != null && key != "status") {
+        return json_data[key];
+    }
+}
+
+async function runScenario(scenarioNum) {
     if (scenarioNum === 1) {
         // omit, control
         console.log("Omit");

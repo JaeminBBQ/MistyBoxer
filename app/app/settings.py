@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-*o88yh7eb^2g#dt-n8!kbhfxs24$6xq#%wo@*^xjdl6b!=hv!1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ["localhost", "app.s3pa.site"]
+
+# CORS_ALLOWED_ORIGINS = [
+#     'https://app.s3pa.site',
+#     'http://app.s3pa.site',
+# ]
 
 
 # Application definition
@@ -38,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'misty_api',
     'web_app',
 ]
@@ -45,6 +53,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

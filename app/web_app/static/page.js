@@ -1,5 +1,5 @@
 const SCENARIO = 1; // omit: 1, before: 2, after: 3
-const BASE_URL = "http://127.0.0.1:8000/misty/";
+const BASE_URL = "https://app.s3pa.site/misty/";
 let startTime = endTime = 0;
 
 function start() {
@@ -11,12 +11,17 @@ function start() {
     }
     console.log("start timer");
     console.log("Running scenario ", SCENARIO);
-    runScenario(SCENARIO);
+    // runScenario(SCENARIO);
+    runScenarioBetter(1, "status");
     startTime = Date.now();
 }
 
 function stop() {
     console.log("stop misty");
+    endTime = Date.now();
+
+    let diff = Math.abs(endTime - startTime);
+    console.log(diff);
 }
 
 function completeTask() {
@@ -30,7 +35,7 @@ async function runScenarioBetter(body_data, key) {
         method: "POST",
         body: body_data
     };
-    const url = BASE_URL + "scenario1";
+    const url = BASE_URL + "scenario3/";
 
     const res = await fetch(url, tableParam);
     let json_data = await res.json();
@@ -58,3 +63,5 @@ async function runScenario(scenarioNum) {
         console.error("Not implemented");
     }
 }
+
+
